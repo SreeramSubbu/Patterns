@@ -4,7 +4,7 @@ package pattern.observer;
  *
  * @author ramudu
  */
-public interface Observers {
+public interface Observer {
 
     void update(Double price1, Double price2, Double price3);
 

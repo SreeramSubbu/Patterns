@@ -4,7 +4,7 @@ package pattern.observer;
  *
  * @author ramudu
  */
-public class StockObserver implements Observers {
+public class StockObserver implements Observer {
 
     private Double ibmPrice;
     private Double googlePrice;

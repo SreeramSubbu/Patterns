@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  */
 public class StockObservable implements Observable {
 
-    private ArrayList<Observers> observers;
+    private ArrayList<Observer> observers;
 
     private Double ibmPrice;
     private Double googlePrice;
@@ -25,12 +25,12 @@ public class StockObservable implements Observable {
     }
 
     @Override
-    public void register(Observers ob) {
+    public void register(Observer ob) {
         this.getObservers().add(ob);
     }
 
     @Override
-    public void unregister(Observers ob) {
+    public void unregister(Observer ob) {
         this.getObservers().remove(ob);
     }
 
@@ -45,14 +45,14 @@ public class StockObservable implements Observable {
     /**
      * @return the observers
      */
-    public ArrayList<Observers> getObservers() {
+    public ArrayList<Observer> getObservers() {
         return observers;
     }
 
     /**
      * @param observers the observers to set
      */
-    public void setObservers(ArrayList<Observers> observers) {
+    public void setObservers(ArrayList<Observer> observers) {
         this.observers = observers;
     }
 

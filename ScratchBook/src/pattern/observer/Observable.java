@@ -6,9 +6,9 @@ package pattern.observer;
  */
 public interface Observable {
 
-    void register(Observers ob);
+    void register(Observer ob);
 
-    void unregister(Observers ob);
+    void unregister(Observer ob);
 
     void notifyObs();
 
