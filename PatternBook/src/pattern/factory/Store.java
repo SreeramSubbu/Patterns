@@ -5,7 +5,7 @@ package pattern.factory;
  * @author ramudu
  */
 public class Store {
-    
+
     public static void main(String[] args) {
         RandomCreator rc = new RandomCreator();
         rc.createProduct().display();
@@ -15,7 +15,7 @@ public class Store {
         sc.createProduct().display();
         sc.createProduct().display();
         sc.createProduct().display();
-              
+
     }
 
 }

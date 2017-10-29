@@ -7,5 +7,5 @@ package pattern.factory;
 public interface Product {
 
     void display();
-    
+
 }

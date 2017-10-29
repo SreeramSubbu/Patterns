@@ -8,9 +8,8 @@ import java.util.Random;
  */
 public class RandomCreator implements Creator {
 
-     Random random = new Random();
+    Random random = new Random();
 
-   
     public Product createProduct() {
         int mod = random.nextInt() % 3;
         switch (Math.abs(mod)) {
@@ -21,7 +20,7 @@ public class RandomCreator implements Creator {
             case 2:
                 return new ProductC();
         };
-    
+
         return null;
     }
 }

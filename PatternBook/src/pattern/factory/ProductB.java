@@ -4,11 +4,11 @@ package pattern.factory;
  *
  * @author ramudu
  */
-public class ProductB implements Product{
+public class ProductB implements Product {
 
     @Override
-    public void display(){
-    System.out.println(" Product B");
-}
+    public void display() {
+        System.out.println(" Product B");
+    }
 
 }
