@@ -20,6 +20,8 @@ Contents:
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:2"> 1.3.  Command</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:0,bo:1"> 2.  Structural</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:0"> 2.1.  Decorator</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:1"> 2.2.  Adapter</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:2"> 2.3.  Facade</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:0,bo:2"> 3.  Creational</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:0"> 3.1.  Factory Method</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:1"> 3.2.  Abstract Factory Pattern</a></br>
@@ -31,6 +33,7 @@ Contents:
 </div><div class="vym-toc-branch-1"><a href="#mc:1,bo:3"> 4.  Loosely Coupled</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:1,bo:4"> 5.  Open/Closed</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:1,bo:5"> 6.  Dependency Inversion</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:6"> 7.  Least Knowledge</a></br>
 </div></td></tr>
 </table>
 
@@ -76,6 +79,18 @@ Encapsulates a request as an object , thereby letting you parameterize clients<b
 <table class="vym-note"><tr><td class="vym-note-flag">
 <td>
 Decorator Patter attaches additional resposibilities to the object dynamically.<br/>Decorators provide flexibile alternative to subclassing for extending<br/>functionality.<br/><br/>- Decorators have same super type as the objects they decorate<br/>- Decorators add its own behavior either before or after delegating to do the<br/>object it  decorates<br/>- Decorator classes are typically created with builder/factory pattern.<br/>- Overuse leads to many small objects resulting a complex code
+</td></tr></table>
+  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:1'>Adapter</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Converts one interface of a class to another interfce that clients expect. Helps<br/>classes to work together that couldn't otherwise because of incompatable<br/>interfaces.<br/><br/>They are of two kinds, object adapters which uses composition of adaptee class<br/>and class adapters which uses inhertence of adaptee class.<br/><br/>Class adapters requires multiple inhertence as it needs to inherit Client<br/>interface and Adaptee.<br/><br/>Adapters converts the interface where as decorators add new responsibility.
+</td></tr></table>
+  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:2'>Facade</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Facade provides a unified interface to a set of interface in a subsystem. Facade<br/>defines a higher level interface that makes the subsystem easier to use.
 </td></tr></table>
   </li>
     </ul>
@@ -144,33 +159,42 @@ Classes should be open for extension to add new behaviours, but closed for<br/>m
 Depend on abstractions not upon concreate classes.<br/> - No variable should hold reference to a concreate class<br/>- No class should derive from a concreate class<br/>- No method should override an implementation of a base class.<br/><br/>Impossible to follow, so just strive to follow.
 </td></tr></table>
 </h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:6'>Least Knowledge</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Talk only to your friends.<br/> - Calling methods from a class that is friend (class composes) our class<br/>creates tight coupling.<br/>- More dependency =&gt; high coupling =&gt; less flexible =&gt; high maintainence cost.<br/><br/>Invoke methods that belong to<br/> - Self<br/> - Parameter to a method<br/> - Any component object<br/> - object that is cretead/instantiated <br/>- Dont invoke methods from objects that was returned from a method call.<br/><br/>- This principle is equivallent to Law of Demeter.<br/>- Heavy usage of this principle leads to high complexity and decreased<br/>performance.
+</td></tr></table>
+</h2>
   
 
 <map name='imagemap'>
-  <area shape='rect' coords='702.5,149.35,855.125,185.35' href='#mc:0'>
-  <area shape='rect' coords='925.163,34,1028.71,67' href='#mc:0,bo:0'>
-  <area shape='rect' coords='1071.71,5,1138.82,34' href='#mc:0,bo:0,bo:0'>
-  <area shape='rect' coords='1071.71,36,1157.6,65' href='#mc:0,bo:0,bo:1'>
-  <area shape='rect' coords='1071.71,67,1150.55,96' href='#mc:0,bo:0,bo:2'>
-  <area shape='rect' coords='903.163,302.7,992.85,335.7' href='#mc:0,bo:1'>
-  <area shape='rect' coords='1035.85,304.7,1114.33,333.7' href='#mc:0,bo:1,bo:0'>
-  <area shape='rect' coords='645.504,300.284,737.239,333.284' href='#mc:0,bo:2'>
-  <area shape='rect' coords='505.91,271.284,624.504,300.284' href='#mc:0,bo:2,bo:0'>
-  <area shape='rect' coords='446.551,302.284,624.504,331.284' href='#mc:0,bo:2,bo:1'>
-  <area shape='rect' coords='550.489,333.284,624.504,362.284' href='#mc:0,bo:2,bo:2'>
-  <area shape='rect' coords='28.5,154.35,192.344,190.35' href='#mc:1'>
-  <area shape='rect' coords='286.036,37.55,392.598,70.55' href='#mc:1,bo:0'>
-  <area shape='rect' coords='288.772,180.7,401.631,213.7' href='#mc:1,bo:1'>
-  <area shape='rect' coords='311.513,95.8385,392.622,128.839' href='#mc:1,bo:2'>
-  <area shape='rect' coords='269.814,257.276,414.658,290.276' href='#mc:1,bo:3'>
-  <area shape='rect' coords='302.356,352.714,418.637,385.714' href='#mc:1,bo:4'>
-  <area shape='rect' coords='293.119,409.114,483.494,442.114' href='#mc:1,bo:5'>
+  <area shape='rect' coords='783.115,149.35,935.74,185.35' href='#mc:0'>
+  <area shape='rect' coords='1005.78,34,1109.32,67' href='#mc:0,bo:0'>
+  <area shape='rect' coords='1152.32,5,1219.43,34' href='#mc:0,bo:0,bo:0'>
+  <area shape='rect' coords='1152.32,36,1238.22,65' href='#mc:0,bo:0,bo:1'>
+  <area shape='rect' coords='1152.32,67,1231.17,96' href='#mc:0,bo:0,bo:2'>
+  <area shape='rect' coords='983.778,302.7,1073.47,335.7' href='#mc:0,bo:1'>
+  <area shape='rect' coords='1116.47,273.7,1194.95,302.7' href='#mc:0,bo:1,bo:0'>
+  <area shape='rect' coords='1116.47,304.7,1179.22,333.7' href='#mc:0,bo:1,bo:1'>
+  <area shape='rect' coords='1116.47,335.7,1173.17,364.7' href='#mc:0,bo:1,bo:2'>
+  <area shape='rect' coords='726.12,300.284,817.854,333.284' href='#mc:0,bo:2'>
+  <area shape='rect' coords='586.526,271.284,705.12,300.284' href='#mc:0,bo:2,bo:0'>
+  <area shape='rect' coords='527.167,302.284,705.12,331.284' href='#mc:0,bo:2,bo:1'>
+  <area shape='rect' coords='631.104,333.284,705.12,362.284' href='#mc:0,bo:2,bo:2'>
+  <area shape='rect' coords='109.115,154.35,272.959,190.35' href='#mc:1'>
+  <area shape='rect' coords='366.651,37.55,473.214,70.55' href='#mc:1,bo:0'>
+  <area shape='rect' coords='369.387,180.7,482.246,213.7' href='#mc:1,bo:1'>
+  <area shape='rect' coords='392.128,95.8385,473.237,128.839' href='#mc:1,bo:2'>
+  <area shape='rect' coords='350.429,257.276,495.273,290.276' href='#mc:1,bo:3'>
+  <area shape='rect' coords='382.971,352.714,499.252,385.714' href='#mc:1,bo:4'>
+  <area shape='rect' coords='373.734,409.114,564.109,442.114' href='#mc:1,bo:5'>
+  <area shape='rect' coords='27.5,246.06,177.094,279.06' href='#mc:1,bo:6'>
 </map>
 <hr/>
 <table class="vym-footer">   
         <tr> 
         <td class="vym-footerL">/home/ramudu/Documents/codebase/patterns/PatternBook/NoteBook/Patterns.html</td> 
-            <td class="vym-footerC">2017-10-29</td> 
+            <td class="vym-footerC">2017-10-30</td> 
             <td class="vym-footerR"> <a href='http://www.insilmaril.de/vym'>vym 2.6.0</a></td> 
             </tr> 
              </table>
