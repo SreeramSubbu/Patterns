@@ -18,6 +18,7 @@ Contents:
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:0"> 1.1.  Strategy</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:1"> 1.2.  Oberserver</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:2"> 1.3.  Command</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:3"> 1.4.  State Pattern</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:0,bo:1"> 2.  Structural</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:0"> 2.1.  Decorator</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:1"> 2.2.  Adapter</a></br>
@@ -50,7 +51,7 @@ Contents:
   <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:0'>Behavioural</span>
 <table class="vym-note"><tr><td class="vym-note-flag">
 <td>
-Command pattern encapsulates the request as an object there by letting you to<br/>parameterize other objects with differnt requests, queues or log requests and<br/>support undo opearations.
+Patterns that are concerned about how classes and objects interact and<br/>distribute resposibility.
 </td></tr></table>
 </h2>
     <ul class="vym-list-ul-2">
@@ -72,8 +73,19 @@ Observer Pattern defines a 1 to * dependency between objects so that when one<br
 Encapsulates a request as an object , thereby letting you parameterize clients<br/>with different requests,queue or log requests and support undo operations.<br/> - Use when you need to decouple an object making requests from those which<br/>knows how to perform it<br/> - Macro Commands are sets of Command objects that can be invoked, and undo-ed.<br/>- Command pattern can be used for queuing commands, wait for first command to<br/>complete execution and then execute the next one.<br/><br/>- Command pattern can be used to restore to a check point. i,e Log what all<br/>happend to a stack, and undo it if you want to restore.
 </td></tr></table>
   </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:3'>State Pattern</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+State pattern allows an object to alter its behaviour whent its internal state<br/>changes. The object will appear to change its class.<br/><br/> - Allows object to have differnet behaviour based on an internal state.<br/>- State pattern allows a context to change its behaviour according to state of<br/>the context<br/>-Strategy pattern which has the same class diagram as state diagram, configures<br/>/composes the context with a behaviour/algorithm<br/>- State pattern will typically introduce more classes into the code
+</td></tr></table>
+  </li>
     </ul>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:1'>Structural</span></h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:1'>Structural</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Classes that lets you compose the classes or object into large structures
+</td></tr></table>
+</h2>
     <ul class="vym-list-ul-2">
       <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:0'>Decorator</span>
 <table class="vym-note"><tr><td class="vym-note-flag">
@@ -94,7 +106,12 @@ Facade provides a unified interface to a set of interface in a subsystem. Facade
 </td></tr></table>
   </li>
     </ul>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:2'>Creational</span></h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:2'>Creational</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Provides a way to decouple client from the objects that it needs to instantiate
+</td></tr></table>
+</h2>
     <ul class="vym-list-ul-2">
       <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:0'>Factory Method</span>
 <table class="vym-note"><tr><td class="vym-note-flag">
@@ -168,33 +185,34 @@ Talk only to your friends.<br/> - Calling methods from a class that is friend (c
   
 
 <map name='imagemap'>
-  <area shape='rect' coords='783.115,149.35,935.74,185.35' href='#mc:0'>
-  <area shape='rect' coords='1005.78,34,1109.32,67' href='#mc:0,bo:0'>
-  <area shape='rect' coords='1152.32,5,1219.43,34' href='#mc:0,bo:0,bo:0'>
-  <area shape='rect' coords='1152.32,36,1238.22,65' href='#mc:0,bo:0,bo:1'>
-  <area shape='rect' coords='1152.32,67,1231.17,96' href='#mc:0,bo:0,bo:2'>
-  <area shape='rect' coords='983.778,302.7,1073.47,335.7' href='#mc:0,bo:1'>
-  <area shape='rect' coords='1116.47,273.7,1194.95,302.7' href='#mc:0,bo:1,bo:0'>
-  <area shape='rect' coords='1116.47,304.7,1179.22,333.7' href='#mc:0,bo:1,bo:1'>
-  <area shape='rect' coords='1116.47,335.7,1173.17,364.7' href='#mc:0,bo:1,bo:2'>
-  <area shape='rect' coords='726.12,300.284,817.854,333.284' href='#mc:0,bo:2'>
-  <area shape='rect' coords='586.526,271.284,705.12,300.284' href='#mc:0,bo:2,bo:0'>
-  <area shape='rect' coords='527.167,302.284,705.12,331.284' href='#mc:0,bo:2,bo:1'>
-  <area shape='rect' coords='631.104,333.284,705.12,362.284' href='#mc:0,bo:2,bo:2'>
-  <area shape='rect' coords='109.115,154.35,272.959,190.35' href='#mc:1'>
-  <area shape='rect' coords='366.651,37.55,473.214,70.55' href='#mc:1,bo:0'>
-  <area shape='rect' coords='369.387,180.7,482.246,213.7' href='#mc:1,bo:1'>
-  <area shape='rect' coords='392.128,95.8385,473.237,128.839' href='#mc:1,bo:2'>
-  <area shape='rect' coords='350.429,257.276,495.273,290.276' href='#mc:1,bo:3'>
-  <area shape='rect' coords='382.971,352.714,499.252,385.714' href='#mc:1,bo:4'>
-  <area shape='rect' coords='373.734,409.114,564.109,442.114' href='#mc:1,bo:5'>
-  <area shape='rect' coords='27.5,246.06,177.094,279.06' href='#mc:1,bo:6'>
+  <area shape='rect' coords='499.115,570.8,651.74,606.8' href='#mc:0'>
+  <area shape='rect' coords='721.778,455.45,825.325,488.45' href='#mc:0,bo:0'>
+  <area shape='rect' coords='868.325,410.95,935.434,439.95' href='#mc:0,bo:0,bo:0'>
+  <area shape='rect' coords='868.325,441.95,954.215,470.95' href='#mc:0,bo:0,bo:1'>
+  <area shape='rect' coords='868.325,472.95,947.168,501.95' href='#mc:0,bo:0,bo:2'>
+  <area shape='rect' coords='868.325,503.95,967.981,532.95' href='#mc:0,bo:0,bo:3'>
+  <area shape='rect' coords='721.778,724.15,811.465,757.15' href='#mc:0,bo:1'>
+  <area shape='rect' coords='854.465,695.15,932.95,724.15' href='#mc:0,bo:1,bo:0'>
+  <area shape='rect' coords='854.465,726.15,917.215,755.15' href='#mc:0,bo:1,bo:1'>
+  <area shape='rect' coords='854.465,757.15,911.168,786.15' href='#mc:0,bo:1,bo:2'>
+  <area shape='rect' coords='464.12,721.734,555.854,754.734' href='#mc:0,bo:2'>
+  <area shape='rect' coords='302.526,692.734,421.12,721.734' href='#mc:0,bo:2,bo:0'>
+  <area shape='rect' coords='243.167,723.734,421.12,752.734' href='#mc:0,bo:2,bo:1'>
+  <area shape='rect' coords='347.104,754.734,421.12,783.734' href='#mc:0,bo:2,bo:2'>
+  <area shape='rect' coords='109.115,121.8,272.959,157.8' href='#mc:1'>
+  <area shape='rect' coords='366.651,5,473.214,38' href='#mc:1,bo:0'>
+  <area shape='rect' coords='369.387,148.15,482.246,181.15' href='#mc:1,bo:1'>
+  <area shape='rect' coords='392.128,63.2885,473.237,96.2885' href='#mc:1,bo:2'>
+  <area shape='rect' coords='350.429,224.726,495.273,257.726' href='#mc:1,bo:3'>
+  <area shape='rect' coords='382.971,320.164,499.252,353.164' href='#mc:1,bo:4'>
+  <area shape='rect' coords='373.734,376.564,564.109,409.564' href='#mc:1,bo:5'>
+  <area shape='rect' coords='27.5,213.51,177.094,246.51' href='#mc:1,bo:6'>
 </map>
 <hr/>
 <table class="vym-footer">   
         <tr> 
         <td class="vym-footerL">/home/ramudu/Documents/codebase/patterns/PatternBook/NoteBook/Patterns.html</td> 
-            <td class="vym-footerC">2017-10-30</td> 
+            <td class="vym-footerC">2017-11-02</td> 
             <td class="vym-footerR"> <a href='http://www.insilmaril.de/vym'>vym 2.6.0</a></td> 
             </tr> 
              </table>
