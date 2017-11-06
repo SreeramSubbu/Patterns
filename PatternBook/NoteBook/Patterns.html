@@ -19,14 +19,28 @@ Contents:
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:1"> 1.2.  Oberserver</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:2"> 1.3.  Command</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:3"> 1.4.  State Pattern</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:4"> 1.5.  Template</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:5"> 1.6.  Iterator</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:6"> 1.7.  Mediator</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:7"> 1.8.  Visitor</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:8"> 1.9.  Memento</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:9"> 1.10.  Chain of resposibility</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:10"> 1.11.  Interpreter</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:0,bo:1"> 2.  Structural</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:0"> 2.1.  Decorator</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:1"> 2.2.  Adapter</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:2"> 2.3.  Facade</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:3"> 2.4.  Proxy</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:4"> 2.5.  Composite</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:5"> 2.6.  Bridge</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:6"> 2.7.  Flyweight</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:0,bo:2"> 3.  Creational</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:0"> 3.1.  Factory Method</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:1"> 3.2.  Abstract Factory Pattern</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:2"> 3.3.  Singleton</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:3"> 3.4.  Builder</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:4"> 3.5.  Prototype</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:3"> 4.  Compound</a></br>
 </div><div class="vym-toc-branch-0"><a href="#mc:1">  Design Principles</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:1,bo:0"> 1.  Encapsulate</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:1,bo:1"> 2.  Composition</a></br>
@@ -35,6 +49,8 @@ Contents:
 </div><div class="vym-toc-branch-1"><a href="#mc:1,bo:4"> 5.  Open/Closed</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:1,bo:5"> 6.  Dependency Inversion</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:1,bo:6"> 7.  Least Knowledge</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:7"> 8.  Single Responsibility / High Cohesion</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:8"> 9.  Hollywood</a></br>
 </div></td></tr>
 </table>
 
@@ -44,6 +60,8 @@ Contents:
 <td>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
 
+<p class="vym-note-paragraph">Pattern is a solution to a problem in a context.</p>
+<p class="vym-note-paragraph"><br /></p>
 <p class="vym-note-paragraph"><span style=" font-family:'DejaVu Sans Mono'; font-size:12pt;">Patterns allow some part of the system vary independently of all other parts.</span></p>
 </td></tr></table>
 </h1>
@@ -79,6 +97,23 @@ Encapsulates a request as an object , thereby letting you parameterize clients<b
 State pattern allows an object to alter its behaviour whent its internal state<br/>changes. The object will appear to change its class.<br/><br/> - Allows object to have differnet behaviour based on an internal state.<br/>- State pattern allows a context to change its behaviour according to state of<br/>the context<br/>-Strategy pattern which has the same class diagram as state diagram, configures<br/>/composes the context with a behaviour/algorithm<br/>- State pattern will typically introduce more classes into the code
 </td></tr></table>
   </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:4'>Template</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Template method pattern defines  a skelton of algorithm in a method deferring<br/>some steps to subclasses. It lets subclasses re define certain steps of the<br/>algorithm without chaging the actual structure.<br/><br/>- Factory method is a specialized template method.<br/>- Strategy and Template pattern encapsulates algorithm one does by composition.<br/>Other does by inheritence.
+</td></tr></table>
+  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:5'>Iterator</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Provides a way to access elements of a collection without exposing its<br/>underlying representation.
+</td></tr></table>
+  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:6'>Mediator</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:7'>Visitor</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:8'>Memento</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:9'>Chain of resposibility</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:10'>Interpreter</span>  </li>
     </ul>
   <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:1'>Structural</span>
 <table class="vym-note"><tr><td class="vym-note-flag">
@@ -105,6 +140,20 @@ Converts one interface of a class to another interfce that clients expect. Helps
 Facade provides a unified interface to a set of interface in a subsystem. Facade<br/>defines a higher level interface that makes the subsystem easier to use.
 </td></tr></table>
   </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:3'>Proxy</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Proxy pattern provides a surrogate or placeholder for another object to control<br/>access to it.<br/> - Remote Proxy to control access to remote object<br/> - Virtual proxy to control access to resource that is expensive to create<br/> - Protection proxy to access a resource based on access rights.
+</td></tr></table>
+  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:4'>Composite</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Allows to compose objects in tree structure to represent part/whole hierrachy.<br/>Use it when you want to treat individual and collections uniformly.
+</td></tr></table>
+  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:5'>Bridge</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:6'>Flyweight</span>  </li>
     </ul>
   <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:2'>Creational</span>
 <table class="vym-note"><tr><td class="vym-note-flag">
@@ -131,7 +180,15 @@ Abstract factory pattern provides an interface for creating families of related<
 Singleton Pattern ensures a class has only one instance and provides a global<br/>point of access to it.<br/><br/>Three methods<br/>1. Lazy instantiantion<br/>      - Have issue of duplication in multithreaded env. Solution 2 or 3<br/>2. Eager instantiation<br/>      - Instantiate during class loading. Issue is that in case there are<br/>multiple class loaders duplication can occur.<br/>3. Double check locking<br/>     - uses volatile static variable and sychronized creation.
 </td></tr></table>
   </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:3'>Builder</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:4'>Prototype</span>  </li>
     </ul>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:3'>Compound</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Compound pattern combines two or more patterns into a solution that solves<br/>recurring or general problem.<br/><br/> - MVC is a compund pattern that consist of Observer,strategy and Composite<br/>pattern.<br/> -- Model makes use of observer pattern, keeping observers updated yet<br/>decoupled.<br/> -- View uses composite pattern to implement nested component<br/> -- Controller uses strategy pattern, differnt strategy for different behaviour.<br/><br/> -- Apdapter pattern can be used ot adapt new model to an existing view and<br/>controller.<br/><br/> -- Model 2 is an adaptation of MVC for web apps.
+</td></tr></table>
+</h2>
   
 <h1><span class='vym-branch-0' style='color:#000000' id='mc:1'>Design Principles</span>
 <table class="vym-note"><tr><td class="vym-note-flag">
@@ -182,37 +239,65 @@ Depend on abstractions not upon concreate classes.<br/> - No variable should hol
 Talk only to your friends.<br/> - Calling methods from a class that is friend (class composes) our class<br/>creates tight coupling.<br/>- More dependency =&gt; high coupling =&gt; less flexible =&gt; high maintainence cost.<br/><br/>Invoke methods that belong to<br/> - Self<br/> - Parameter to a method<br/> - Any component object<br/> - object that is cretead/instantiated <br/>- Dont invoke methods from objects that was returned from a method call.<br/><br/>- This principle is equivallent to Law of Demeter.<br/>- Heavy usage of this principle leads to high complexity and decreased<br/>performance.
 </td></tr></table>
 </h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:7'>Single Responsibility / High Cohesion</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+A class should have only one reason to change
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:8'>Hollywood</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Don't call us , we will call you. Hollywood principle which guides us to put<br/>decision making in high-level modules that can decide when and how to call low<br/>level modules.<br/> - template method pattern.
+</td></tr></table>
+</h2>
   
 
 <map name='imagemap'>
-  <area shape='rect' coords='499.115,570.8,651.74,606.8' href='#mc:0'>
-  <area shape='rect' coords='721.778,455.45,825.325,488.45' href='#mc:0,bo:0'>
-  <area shape='rect' coords='868.325,410.95,935.434,439.95' href='#mc:0,bo:0,bo:0'>
-  <area shape='rect' coords='868.325,441.95,954.215,470.95' href='#mc:0,bo:0,bo:1'>
-  <area shape='rect' coords='868.325,472.95,947.168,501.95' href='#mc:0,bo:0,bo:2'>
-  <area shape='rect' coords='868.325,503.95,967.981,532.95' href='#mc:0,bo:0,bo:3'>
-  <area shape='rect' coords='721.778,724.15,811.465,757.15' href='#mc:0,bo:1'>
-  <area shape='rect' coords='854.465,695.15,932.95,724.15' href='#mc:0,bo:1,bo:0'>
-  <area shape='rect' coords='854.465,726.15,917.215,755.15' href='#mc:0,bo:1,bo:1'>
-  <area shape='rect' coords='854.465,757.15,911.168,786.15' href='#mc:0,bo:1,bo:2'>
-  <area shape='rect' coords='464.12,721.734,555.854,754.734' href='#mc:0,bo:2'>
-  <area shape='rect' coords='302.526,692.734,421.12,721.734' href='#mc:0,bo:2,bo:0'>
-  <area shape='rect' coords='243.167,723.734,421.12,752.734' href='#mc:0,bo:2,bo:1'>
-  <area shape='rect' coords='347.104,754.734,421.12,783.734' href='#mc:0,bo:2,bo:2'>
-  <area shape='rect' coords='109.115,121.8,272.959,157.8' href='#mc:1'>
-  <area shape='rect' coords='366.651,5,473.214,38' href='#mc:1,bo:0'>
-  <area shape='rect' coords='369.387,148.15,482.246,181.15' href='#mc:1,bo:1'>
-  <area shape='rect' coords='392.128,63.2885,473.237,96.2885' href='#mc:1,bo:2'>
-  <area shape='rect' coords='350.429,224.726,495.273,257.726' href='#mc:1,bo:3'>
-  <area shape='rect' coords='382.971,320.164,499.252,353.164' href='#mc:1,bo:4'>
-  <area shape='rect' coords='373.734,376.564,564.109,409.564' href='#mc:1,bo:5'>
-  <area shape='rect' coords='27.5,213.51,177.094,246.51' href='#mc:1,bo:6'>
+  <area shape='rect' coords='583.288,570.8,735.913,606.8' href='#mc:0'>
+  <area shape='rect' coords='806.361,451.892,909.908,484.892' href='#mc:0,bo:0'>
+  <area shape='rect' coords='952.908,298.892,1020.02,327.892' href='#mc:0,bo:0,bo:0'>
+  <area shape='rect' coords='952.908,329.892,1038.8,358.892' href='#mc:0,bo:0,bo:1'>
+  <area shape='rect' coords='952.908,360.892,1031.75,389.892' href='#mc:0,bo:0,bo:2'>
+  <area shape='rect' coords='952.908,391.892,1052.56,420.892' href='#mc:0,bo:0,bo:3'>
+  <area shape='rect' coords='952.908,422.892,1026.08,451.892' href='#mc:0,bo:0,bo:4'>
+  <area shape='rect' coords='952.908,453.892,1013.03,482.892' href='#mc:0,bo:0,bo:5'>
+  <area shape='rect' coords='930.908,484.892,1001.39,513.892' href='#mc:0,bo:0,bo:6'>
+  <area shape='rect' coords='930.908,515.892,983.658,544.892' href='#mc:0,bo:0,bo:7'>
+  <area shape='rect' coords='930.908,546.892,1005.6,575.892' href='#mc:0,bo:0,bo:8'>
+  <area shape='rect' coords='930.908,577.892,1084.28,606.892' href='#mc:0,bo:0,bo:9'>
+  <area shape='rect' coords='930.908,608.892,1014,637.892' href='#mc:0,bo:0,bo:10'>
+  <area shape='rect' coords='805.14,731.18,894.827,764.18' href='#mc:0,bo:1'>
+  <area shape='rect' coords='937.827,640.18,1016.31,669.18' href='#mc:0,bo:1,bo:0'>
+  <area shape='rect' coords='937.827,671.18,1000.58,700.18' href='#mc:0,bo:1,bo:1'>
+  <area shape='rect' coords='937.827,702.18,994.53,731.18' href='#mc:0,bo:1,bo:2'>
+  <area shape='rect' coords='937.827,733.18,984.515,762.18' href='#mc:0,bo:1,bo:3'>
+  <area shape='rect' coords='937.827,764.18,1021.09,793.18' href='#mc:0,bo:1,bo:4'>
+  <area shape='rect' coords='915.827,795.18,969.046,824.18' href='#mc:0,bo:1,bo:5'>
+  <area shape='rect' coords='915.827,826.18,991.452,855.18' href='#mc:0,bo:1,bo:6'>
+  <area shape='rect' coords='548.292,721.734,640.027,754.734' href='#mc:0,bo:2'>
+  <area shape='rect' coords='386.699,661.734,505.292,690.734' href='#mc:0,bo:2,bo:0'>
+  <area shape='rect' coords='327.339,692.734,505.292,721.734' href='#mc:0,bo:2,bo:1'>
+  <area shape='rect' coords='431.277,723.734,505.292,752.734' href='#mc:0,bo:2,bo:2'>
+  <area shape='rect' coords='448.464,754.734,505.292,783.734' href='#mc:0,bo:2,bo:3'>
+  <area shape='rect' coords='428.324,785.734,505.292,814.734' href='#mc:0,bo:2,bo:4'>
+  <area shape='rect' coords='424.25,457.45,522.891,490.45' href='#mc:0,bo:3'>
+  <area shape='rect' coords='193.288,121.8,357.132,157.8' href='#mc:1'>
+  <area shape='rect' coords='450.824,5,557.386,38' href='#mc:1,bo:0'>
+  <area shape='rect' coords='443.88,161.76,556.739,194.76' href='#mc:1,bo:1'>
+  <area shape='rect' coords='476.301,63.2885,557.41,96.2885' href='#mc:1,bo:2'>
+  <area shape='rect' coords='434.602,224.726,579.446,257.726' href='#mc:1,bo:3'>
+  <area shape='rect' coords='467.144,320.164,583.425,353.164' href='#mc:1,bo:4'>
+  <area shape='rect' coords='457.907,376.564,648.282,409.564' href='#mc:1,bo:5'>
+  <area shape='rect' coords='39.6728,212.51,189.267,245.51' href='#mc:1,bo:6'>
+  <area shape='rect' coords='27.5,393.263,342.703,426.263' href='#mc:1,bo:7'>
+  <area shape='rect' coords='92.4561,332.177,190.472,365.177' href='#mc:1,bo:8'>
 </map>
 <hr/>
 <table class="vym-footer">   
         <tr> 
         <td class="vym-footerL">/home/ramudu/Documents/codebase/patterns/PatternBook/NoteBook/Patterns.html</td> 
-            <td class="vym-footerC">2017-11-02</td> 
+            <td class="vym-footerC">2017-11-06</td> 
             <td class="vym-footerR"> <a href='http://www.insilmaril.de/vym'>vym 2.6.0</a></td> 
             </tr> 
              </table>

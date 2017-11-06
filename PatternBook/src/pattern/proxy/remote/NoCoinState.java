@@ -1,4 +1,5 @@
-package pattern.state;
+package pattern.proxy.remote;
+
 
 /**
  *
@@ -6,7 +7,7 @@ package pattern.state;
  */
 class NoCoinState implements State {
 
-    GumBallMachine machine;
+    transient GumBallMachine machine;
 
     public NoCoinState(GumBallMachine machine) {
 

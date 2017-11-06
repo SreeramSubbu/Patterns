@@ -1,10 +1,12 @@
-package pattern.state;
+package pattern.proxy.remote;
+
+import java.io.Serializable;
 
 /**
  *
  * @author ramudu
  */
-interface State {
+interface State extends Serializable {
 
     void insertCoin();
 

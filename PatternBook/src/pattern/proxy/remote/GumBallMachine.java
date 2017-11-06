@@ -1,10 +1,13 @@
-package pattern.state;
+package pattern.proxy.remote;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
 /**
  *
  * @author ramudu
  */
-class GumBallMachine {
+class GumBallMachine extends UnicastRemoteObject implements GumBallMachineRemote{
 
     /**
      * @return the soldOutState
@@ -65,6 +68,7 @@ class GumBallMachine {
     /**
      * @return the state
      */
+    @Override
     public State getState() {
         return state;
     }
@@ -83,8 +87,9 @@ class GumBallMachine {
 
     private State state = soldOutState;
     int gumBallCount = 0;
+    String location;
 
-    public GumBallMachine(int numberOfGumBall) {
+    public GumBallMachine(int numberOfGumBall) throws RemoteException{
         soldOutState = new SoldOutState(this);
         noCoinState = new NoCoinState(this);
         hasCoinState = new HasCoinState(this);
@@ -112,5 +117,15 @@ class GumBallMachine {
         if (gumBallCount != 0) {
             gumBallCount--;
         }
+    }
+
+    @Override
+    public int getCount() throws RemoteException {
+            return  gumBallCount;
+    }
+
+    @Override
+    public String getLocation() throws RemoteException {
+        return location;
     }
 }

@@ -1,4 +1,4 @@
-package pattern.state;
+package pattern.proxy.remote;
 
 /**
  *
@@ -6,7 +6,7 @@ package pattern.state;
  */
 class HasCoinState implements State {
 
-    GumBallMachine machine;
+    transient GumBallMachine machine;
 
     public HasCoinState(GumBallMachine gumBallMachine) {
         this.machine = gumBallMachine;
