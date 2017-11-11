@@ -41,16 +41,6 @@ Contents:
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:3"> 3.4.  Builder</a></br>
 </div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:4"> 3.5.  Prototype</a></br>
 </div><div class="vym-toc-branch-1"><a href="#mc:0,bo:3"> 4.  Compound</a></br>
-</div><div class="vym-toc-branch-0"><a href="#mc:1">  Design Principles</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:0"> 1.  Encapsulate</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:1"> 2.  Composition</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:2"> 3.  Interface</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:3"> 4.  Loosely Coupled</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:4"> 5.  Open/Closed</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:5"> 6.  Dependency Inversion</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:6"> 7.  Least Knowledge</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:7"> 8.  Single Responsibility / High Cohesion</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:8"> 9.  Hollywood</a></br>
 </div></td></tr>
 </table>
 
@@ -152,7 +142,12 @@ Proxy pattern provides a surrogate or placeholder for another object to control<
 Allows to compose objects in tree structure to represent part/whole hierrachy.<br/>Use it when you want to treat individual and collections uniformly.
 </td></tr></table>
   </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:5'>Bridge</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:5'>Bridge</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+The bridge pattern is a design pattern used in software engineering that is<br/>meant to "decouple an abstraction from its implementation so that the two can<br/>vary independently"<br/><br/>   - Seperation of Concerns, For example in case of a webpage, allows views to<br/>vary independently of model.<br/>   - UML diagram in shape of Bridge<br/>   - Adapter makes things work after they're designed; Bridge makes them work<br/>before they are
+</td></tr></table>
+  </li>
       <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:6'>Flyweight</span>  </li>
     </ul>
   <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:2'>Creational</span>
@@ -190,114 +185,42 @@ Compound pattern combines two or more patterns into a solution that solves<br/>r
 </td></tr></table>
 </h2>
   
-<h1><span class='vym-branch-0' style='color:#000000' id='mc:1'>Design Principles</span>
-<table class="vym-note"><tr><td class="vym-note-flag">
-<td>
-Good Design are reusable,extensable and maintainable.
-</td></tr></table>
-</h1>
-  
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:0'>Encapsulate</span>
-<table class="vym-note"><tr><td class="vym-note-flag">
-<td>
-Isolate what varies from what stays same.
-</td></tr></table>
-</h2>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:1'>Composition</span>
-<table class="vym-note"><tr><td class="vym-note-flag">
-<td>
-Favour Composition over Inheritence.<br/><br/>- Use Inheritence to achive type matching but not to get the behaviour, Ex<br/>decorator pattern<br/>- Composition and Delegation can be used to add behaviours at run time.
-</td></tr></table>
-</h2>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:2'>Interface</span>
-<table class="vym-note"><tr><td class="vym-note-flag">
-<td>
-Program to interface not to implementation.
-</td></tr></table>
-</h2>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:3'>Loosely Coupled</span>
-<table class="vym-note"><tr><td class="vym-note-flag">
-<td>
-Strive  for loosely coupled  designs between objects that interact.
-</td></tr></table>
-</h2>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:4'>Open/Closed</span>
-<table class="vym-note"><tr><td class="vym-note-flag">
-<td>
-Classes should be open for extension to add new behaviours, but closed for<br/>modification.<br/><br/>- Closing down every part of the code might be wasteful<br/>- Using the principle might create higher level of abstraction which adds<br/>complexity to our code.<br/>- Goal is to design code that is resilent to change yet flexible to meet new<br/>requirements.<br/> - Use the principle at the areas which is likely to change.
-</td></tr></table>
-</h2>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:5'>Dependency Inversion</span>
-<table class="vym-note"><tr><td class="vym-note-flag">
-<td>
-Depend on abstractions not upon concreate classes.<br/> - No variable should hold reference to a concreate class<br/>- No class should derive from a concreate class<br/>- No method should override an implementation of a base class.<br/><br/>Impossible to follow, so just strive to follow.
-</td></tr></table>
-</h2>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:6'>Least Knowledge</span>
-<table class="vym-note"><tr><td class="vym-note-flag">
-<td>
-Talk only to your friends.<br/> - Calling methods from a class that is friend (class composes) our class<br/>creates tight coupling.<br/>- More dependency =&gt; high coupling =&gt; less flexible =&gt; high maintainence cost.<br/><br/>Invoke methods that belong to<br/> - Self<br/> - Parameter to a method<br/> - Any component object<br/> - object that is cretead/instantiated <br/>- Dont invoke methods from objects that was returned from a method call.<br/><br/>- This principle is equivallent to Law of Demeter.<br/>- Heavy usage of this principle leads to high complexity and decreased<br/>performance.
-</td></tr></table>
-</h2>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:7'>Single Responsibility / High Cohesion</span>
-<table class="vym-note"><tr><td class="vym-note-flag">
-<td>
-A class should have only one reason to change
-</td></tr></table>
-</h2>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:8'>Hollywood</span>
-<table class="vym-note"><tr><td class="vym-note-flag">
-<td>
-Don't call us , we will call you. Hollywood principle which guides us to put<br/>decision making in high-level modules that can decide when and how to call low<br/>level modules.<br/> - template method pattern.
-</td></tr></table>
-</h2>
-  
 
 <map name='imagemap'>
-  <area shape='rect' coords='583.288,570.8,735.913,606.8' href='#mc:0'>
-  <area shape='rect' coords='806.361,451.892,909.908,484.892' href='#mc:0,bo:0'>
-  <area shape='rect' coords='952.908,298.892,1020.02,327.892' href='#mc:0,bo:0,bo:0'>
-  <area shape='rect' coords='952.908,329.892,1038.8,358.892' href='#mc:0,bo:0,bo:1'>
-  <area shape='rect' coords='952.908,360.892,1031.75,389.892' href='#mc:0,bo:0,bo:2'>
-  <area shape='rect' coords='952.908,391.892,1052.56,420.892' href='#mc:0,bo:0,bo:3'>
-  <area shape='rect' coords='952.908,422.892,1026.08,451.892' href='#mc:0,bo:0,bo:4'>
-  <area shape='rect' coords='952.908,453.892,1013.03,482.892' href='#mc:0,bo:0,bo:5'>
-  <area shape='rect' coords='930.908,484.892,1001.39,513.892' href='#mc:0,bo:0,bo:6'>
-  <area shape='rect' coords='930.908,515.892,983.658,544.892' href='#mc:0,bo:0,bo:7'>
-  <area shape='rect' coords='930.908,546.892,1005.6,575.892' href='#mc:0,bo:0,bo:8'>
-  <area shape='rect' coords='930.908,577.892,1084.28,606.892' href='#mc:0,bo:0,bo:9'>
-  <area shape='rect' coords='930.908,608.892,1014,637.892' href='#mc:0,bo:0,bo:10'>
-  <area shape='rect' coords='805.14,731.18,894.827,764.18' href='#mc:0,bo:1'>
-  <area shape='rect' coords='937.827,640.18,1016.31,669.18' href='#mc:0,bo:1,bo:0'>
-  <area shape='rect' coords='937.827,671.18,1000.58,700.18' href='#mc:0,bo:1,bo:1'>
-  <area shape='rect' coords='937.827,702.18,994.53,731.18' href='#mc:0,bo:1,bo:2'>
-  <area shape='rect' coords='937.827,733.18,984.515,762.18' href='#mc:0,bo:1,bo:3'>
-  <area shape='rect' coords='937.827,764.18,1021.09,793.18' href='#mc:0,bo:1,bo:4'>
-  <area shape='rect' coords='915.827,795.18,969.046,824.18' href='#mc:0,bo:1,bo:5'>
-  <area shape='rect' coords='915.827,826.18,991.452,855.18' href='#mc:0,bo:1,bo:6'>
-  <area shape='rect' coords='548.292,721.734,640.027,754.734' href='#mc:0,bo:2'>
-  <area shape='rect' coords='386.699,661.734,505.292,690.734' href='#mc:0,bo:2,bo:0'>
-  <area shape='rect' coords='327.339,692.734,505.292,721.734' href='#mc:0,bo:2,bo:1'>
-  <area shape='rect' coords='431.277,723.734,505.292,752.734' href='#mc:0,bo:2,bo:2'>
-  <area shape='rect' coords='448.464,754.734,505.292,783.734' href='#mc:0,bo:2,bo:3'>
-  <area shape='rect' coords='428.324,785.734,505.292,814.734' href='#mc:0,bo:2,bo:4'>
-  <area shape='rect' coords='424.25,457.45,522.891,490.45' href='#mc:0,bo:3'>
-  <area shape='rect' coords='193.288,121.8,357.132,157.8' href='#mc:1'>
-  <area shape='rect' coords='450.824,5,557.386,38' href='#mc:1,bo:0'>
-  <area shape='rect' coords='443.88,161.76,556.739,194.76' href='#mc:1,bo:1'>
-  <area shape='rect' coords='476.301,63.2885,557.41,96.2885' href='#mc:1,bo:2'>
-  <area shape='rect' coords='434.602,224.726,579.446,257.726' href='#mc:1,bo:3'>
-  <area shape='rect' coords='467.144,320.164,583.425,353.164' href='#mc:1,bo:4'>
-  <area shape='rect' coords='457.907,376.564,648.282,409.564' href='#mc:1,bo:5'>
-  <area shape='rect' coords='39.6728,212.51,189.267,245.51' href='#mc:1,bo:6'>
-  <area shape='rect' coords='27.5,393.263,342.703,426.263' href='#mc:1,bo:7'>
-  <area shape='rect' coords='92.4561,332.177,190.472,365.177' href='#mc:1,bo:8'>
+  <area shape='rect' coords='337.803,304.62,490.428,340.62' href='#mc:0'>
+  <area shape='rect' coords='201.875,167.712,305.422,200.712' href='#mc:0,bo:0'>
+  <area shape='rect' coords='91.7656,14.712,158.875,43.712' href='#mc:0,bo:0,bo:0'>
+  <area shape='rect' coords='72.9844,45.712,158.875,74.712' href='#mc:0,bo:0,bo:1'>
+  <area shape='rect' coords='80.0313,76.712,158.875,105.712' href='#mc:0,bo:0,bo:2'>
+  <area shape='rect' coords='59.2188,107.712,158.875,136.712' href='#mc:0,bo:0,bo:3'>
+  <area shape='rect' coords='85.7031,138.712,158.875,167.712' href='#mc:0,bo:0,bo:4'>
+  <area shape='rect' coords='98.75,169.712,158.875,198.712' href='#mc:0,bo:0,bo:5'>
+  <area shape='rect' coords='88.3906,200.712,158.875,229.712' href='#mc:0,bo:0,bo:6'>
+  <area shape='rect' coords='106.125,231.712,158.875,260.712' href='#mc:0,bo:0,bo:7'>
+  <area shape='rect' coords='84.1875,262.712,158.875,291.712' href='#mc:0,bo:0,bo:8'>
+  <area shape='rect' coords='5.5,293.712,158.875,322.712' href='#mc:0,bo:0,bo:9'>
+  <area shape='rect' coords='75.7813,324.712,158.875,353.712' href='#mc:0,bo:0,bo:10'>
+  <area shape='rect' coords='594.654,96,684.342,129' href='#mc:0,bo:1'>
+  <area shape='rect' coords='727.342,5,805.826,34' href='#mc:0,bo:1,bo:0'>
+  <area shape='rect' coords='727.342,36,790.092,65' href='#mc:0,bo:1,bo:1'>
+  <area shape='rect' coords='727.342,67,784.045,96' href='#mc:0,bo:1,bo:2'>
+  <area shape='rect' coords='727.342,98,774.029,127' href='#mc:0,bo:1,bo:3'>
+  <area shape='rect' coords='727.342,129,810.607,158' href='#mc:0,bo:1,bo:4'>
+  <area shape='rect' coords='727.342,160,780.56,189' href='#mc:0,bo:1,bo:5'>
+  <area shape='rect' coords='705.342,191,780.967,220' href='#mc:0,bo:1,bo:6'>
+  <area shape='rect' coords='576.807,431.554,668.541,464.554' href='#mc:0,bo:2'>
+  <area shape='rect' coords='711.541,371.554,830.135,400.554' href='#mc:0,bo:2,bo:0'>
+  <area shape='rect' coords='711.541,402.554,889.495,431.554' href='#mc:0,bo:2,bo:1'>
+  <area shape='rect' coords='711.541,433.554,785.557,462.554' href='#mc:0,bo:2,bo:2'>
+  <area shape='rect' coords='689.541,464.554,746.37,493.554' href='#mc:0,bo:2,bo:3'>
+  <area shape='rect' coords='689.541,495.554,766.51,524.554' href='#mc:0,bo:2,bo:4'>
+  <area shape='rect' coords='319.765,398.27,418.406,431.27' href='#mc:0,bo:3'>
 </map>
 <hr/>
 <table class="vym-footer">   
         <tr> 
         <td class="vym-footerL">/home/ramudu/Documents/codebase/patterns/PatternBook/NoteBook/Patterns.html</td> 
-            <td class="vym-footerC">2017-11-06</td> 
+            <td class="vym-footerC">2017-11-11</td> 
             <td class="vym-footerR"> <a href='http://www.insilmaril.de/vym'>vym 2.6.0</a></td> 
             </tr> 
              </table>

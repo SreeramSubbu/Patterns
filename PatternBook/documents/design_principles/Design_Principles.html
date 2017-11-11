@@ -1,0 +1,145 @@
+<html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+<meta name="generator=" content=" vym - view your mind - http://www.insilmaril.de/vym">
+<meta name="author" content="unknown user"> 
+<meta name="description" content=""> 
+<link rel='stylesheet' id='css.stylesheet' href='vym.css' />
+
+<head><title>Design_Principles</title></head>
+<body>
+<center><img src="Design_Principles.png" usemap='#imagemap'></center>
+<table class="vym-toc">
+<tr><td class="vym-toc-title">
+Contents:
+</td></tr>
+<tr><td>
+<div class="vym-toc-branch-0"><a href="#mc:0">  Design Principles</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:0"> 1.  Encapsulate</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:1"> 2.  Composition</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:2"> 3.  Interface</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:3"> 4.  Loosely Coupled</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:4"> 5.  Open/Closed</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:5"> 6.  Dependency Inversion</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:6"> 7.  Least Knowledge</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:7"> 8.  Single Responsibility / High Cohesion</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:8"> 9.  Hollywood</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:9"> 10.  DRY</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:10"> 11.  YAGNI</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:11"> 12.  LSP</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:12"> 13.  ISP</a></br>
+</div></td></tr>
+</table>
+
+
+<h1><span class='vym-branch-0' style='color:#000000' id='mc:0'>Design Principles</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Good Design are reusable,extensable and maintainable.
+</td></tr></table>
+</h1>
+  
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:0'>Encapsulate</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Isolate what varies from what stays same.<br/><br/>- Strategy pattern
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:1'>Composition</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Favour Composition over Inheritence.<br/><br/>- Use Inheritence to achive type matching but not to get the behaviour, Ex<br/>decorator pattern<br/>- Composition and Delegation can be used to add behaviours at run time.<br/><br/>- Strategy pattern
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:2'>Interface</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Program to interface not to implementation.<br/><br/>- Strategy pattern
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:3'>Loosely Coupled</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Strive  for loosely coupled  designs between objects that interact.<br/><br/>- Observer pattern
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:4'>Open/Closed</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Classes should be open for extension to add new behaviours, but closed for<br/>modification.<br/><br/>- Closing down every part of the code might be wasteful<br/>- Using the principle might create higher level of abstraction which adds<br/>complexity to our code.<br/>- Goal is to design code that is resilent to change yet flexible to meet new<br/>requirements.<br/> - Use the principle at the areas which is likely to change.<br/><br/>It's a principle for object oriented design first described by Bertrand Meyer<br/>that says that “software entities (classes, modules, functions, etc.) should be<br/>open for extension, but closed for modification”<br/><br/>- Decorator pattern
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:5'>Dependency Inversion</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+DI : Dependency Inversion principleThe principle states:<br/>A. High-level modules should not depend on low-level modules. Both should depend<br/>on abstractions.<br/>B. Abstractions should not depend on details. Details should depend on<br/>abstractions.<br/><br/>Depend on abstractions not upon concreate classes.<br/> - No variable should hold reference to a concreate class<br/>- No class should derive from a concreate class<br/>- No method should override an implementation of a base class.<br/><br/>Impossible to follow, so just strive to follow.<br/><br/>- factory pattern
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:6'>Least Knowledge</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Talk only to your friends.<br/> - Calling methods from a class that is friend (class composes) our class<br/>creates tight coupling.<br/>- More dependency =&gt; high coupling =&gt; less flexible =&gt; high maintainence cost.<br/><br/>Invoke methods that belong to<br/> - Self<br/> - Parameter to a method<br/> - Any component object<br/> - object that is cretead/instantiated <br/>- Dont invoke methods from objects that was returned from a method call.<br/><br/>- This principle is equivallent to Law of Demeter.<br/>- Heavy usage of this principle leads to high complexity and decreased<br/>performance.<br/><br/>- Adapter Pattern
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:7'>Single Responsibility / High Cohesion</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+A class should have only one reason to change<br/><br/>-Composite pattern
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:8'>Hollywood</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Don't call us , we will call you. Hollywood principle which guides us to put<br/>decision making in high-level modules that can decide when and how to call low<br/>level modules.<br/> - template method pattern.
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:9'>DRY</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Do Not repeat yourself both code and effort.<br/><br/>don't repeat yourself (DRY) is a principle of software development aimed at<br/>reducing repetition of all kinds. The DRY principle is stated as "Every piece of<br/>knowledge must have a single, unambiguous, authoritative representation within a<br/>system".
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:10'>YAGNI</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+You are not going to need it : Post pone complexity , implement it only when you<br/>have no choice<br/><br/>You aren't gonna need it" (acronym: YAGNI) is a principle of extreme programming<br/>(XP) that states a programmer should not add functionality until deemed<br/>necessary. XP co-founder Ron Jeffries has written: "Always implement things when<br/>you actually need them, never when you just foresee that you need them."
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:11'>LSP</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Liskov substitution principle if S is a subtype of T, then objects of type T may<br/>be replaced with objects of type S.<br/>Do not use inheritance unless there is a need for subsitutability
+</td></tr></table>
+</h2>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:12'>ISP</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+The interface-segregation principle (ISP) states that no client should be forced<br/>to depend on methods it does not use.
+</td></tr></table>
+</h2>
+  
+
+<map name='imagemap'>
+  <area shape='rect' coords='272.178,162.8,436.022,198.8' href='#mc:0'>
+  <area shape='rect' coords='497.714,5,604.277,38' href='#mc:0,bo:0'>
+  <area shape='rect' coords='545.77,95.7599,658.629,128.76' href='#mc:0,bo:1'>
+  <area shape='rect' coords='507.191,51.289,588.3,84.289' href='#mc:0,bo:2'>
+  <area shape='rect' coords='507.481,202.54,652.325,235.54' href='#mc:0,bo:3'>
+  <area shape='rect' coords='33.847,136.849,127.285,164.849' href='#mc:0,bo:4'>
+  <area shape='rect' coords='27.5,432.193,179.438,460.193' href='#mc:0,bo:5'>
+  <area shape='rect' coords='527.563,266.51,677.157,299.51' href='#mc:0,bo:6'>
+  <area shape='rect' coords='32.39,32.263,282.874,60.263' href='#mc:0,bo:7'>
+  <area shape='rect' coords='562.346,335.177,660.362,368.177' href='#mc:0,bo:8'>
+  <area shape='rect' coords='611.322,470.625,654.728,503.625' href='#mc:0,bo:9'>
+  <area shape='rect' coords='601.868,410.457,663.899,443.457' href='#mc:0,bo:10'>
+  <area shape='rect' coords='39.1,230.8,71.2719,258.8' href='#mc:0,bo:11'>
+  <area shape='rect' coords='41.953,318.695,70.578,346.695' href='#mc:0,bo:12'>
+</map>
+<hr/>
+<table class="vym-footer">   
+        <tr> 
+        <td class="vym-footerL">/home/ramudu/Documents/codebase/patterns/PatternBook/DesignPrinciples/Design_Principles.html</td> 
+            <td class="vym-footerC">2017-11-11</td> 
+            <td class="vym-footerR"> <a href='http://www.insilmaril.de/vym'>vym 2.6.0</a></td> 
+            </tr> 
+             </table>
+</body></html>
